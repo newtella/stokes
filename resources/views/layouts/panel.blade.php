@@ -82,7 +82,7 @@
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="/">Dashboard</a>
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="/">Panel de Administracion</a>
         <!-- Form -->
         <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
           <div class="form-group mb-0">
@@ -113,12 +113,12 @@
       </div>
     </nav>
     <!-- Header -->
-    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+    <div class="header bg-gradient-primary pb-6 pt-5 pt-md-8">
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--7">
-        @yield('content')
-        @include('includes.panel.footer')
+      @yield('content')
+      @include('includes.panel.footer')
     </div>
   </div>
   <!-- Argon Scripts -->
