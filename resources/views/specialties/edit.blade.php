@@ -2,7 +2,7 @@
 @section('content')
 <div class="card shadow">
   <div class="card-header border-0">
-    <h3 class="mb-0">Nueva Especialidad</h3>
+    <h3 class="mb-0">Editar Especialidad</h3>
     <div class="col text-right">
       <a href="{{ url('specialties')}}" class="btn btn-sm btn-primary">Cancelar y volver</a>
     </div>

@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'dpi', 'address', 'phone', 'role', 'password',
     ];
 
     /**
@@ -28,6 +28,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function scopePatients($query)
+    {
+        return $query->where('role', 'patient');
+    }
+
+    public function scopeDoctors($query)
+    {
+        return $query->where('role', 'doctor');
+    }
     /**
      * The attributes that should be cast to native types.
      *

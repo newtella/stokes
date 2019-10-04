@@ -2,9 +2,9 @@
 @section('content')
 <div class="card shadow">
   <div class="card-header border-0">
-    <h3 class="mb-0">Nueva Medico</h3>
+    <h3 class="mb-0">Nuevo Paciente</h3>
     <div class="col text-right">
-      <a href="{{ url('doctors')}}" class="btn btn-sm btn-primary">Cancelar y volver</a>
+      <a href="{{ url('patients')}}" class="btn btn-sm btn-primary">Cancelar y volver</a>
     </div>
   </div>
   <div class="table-responsive">
@@ -24,10 +24,10 @@
           </button>
         </div>
       @endif
-      <form action="{{ url('doctors')}}" method="POST">
+      <form action="{{ url('patients')}}" method="POST">
         @csrf
         <div class="form-group">
-          <label for="name">Nombre del medico</label>
+          <label for="name">Nombre del paciente</label>
           <input type="text" name="name" class="form-control" value="{{old('name')}}" required>
         </div>
         <div class="form-group">
@@ -35,16 +35,16 @@
           <input type="text" name="email" class="form-control" required>
         </div>
         <div class="form-group">
-            <label for="dpi">DPI</label>
-            <input type="text" name="dpi" class="form-control">
+          <label for="dpi">DPI</label>
+          <input type="text" name="dpi" class="form-control">
         </div>
         <div class="form-group">
-            <label for="address">Direccion</label>
-            <input type="text" name="address" class="form-control">
+          <label for="address">Direccion</label>
+          <input type="text" name="address" class="form-control">
         </div>
         <div class="form-group">
-            <label for="phone">Telefono</label>
-            <input type="text" name="phone" class="form-control">
+          <label for="phone">Telefono</label>
+          <input type="text" name="phone" class="form-control">
         </div>
         <div class="form-group">
           <label for="password">Contraseña</label>

@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
 
             $table->string('dpi');
-
+            
             $table->string('address');
             $table->string('phone');
 
