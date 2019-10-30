@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Doctor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\WorkDay;
+use Carbon\Carbon;
 
 
 class ScheduleController extends Controller
@@ -14,37 +15,53 @@ class ScheduleController extends Controller
         //
     }
 
+    private $days = [
+        'Lunes', 'Martes', 'Miercoles', 
+        'Jueves', 'Viernes', 'Sabado', 'Domingo'
+    ];
+
     public function edit()
     {
-        $days = [
-            'Lunes', 'Martes', 'Miercoles', 
-            'Jueves', 'Viernes', 'Sabado', 'Domingo'
-        ];
 
-        $morningtimes = [
-            '00:00', '00:30','01:00', '01:30','02:00', '02:30',
-            '03:00', '03:30','04:00', '04:30','05:00', '05:30',
-            '06:00', '06:30','07:00', '07:30','08:00', '08:30',
-            '09:00', '09:30','10:00', '10:30','11:00', '11:30',
-        ];
+        $workdays = WorkDay::where('user_id', auth()->id())->get();
+        if (count($workdays) > 0) {
+            $workdays->map(function ($workday){
+                $workday->morning_start = (new Carbon ($workday->morning_start))->format('g:i A');
+                $workday->morning_end = (new Carbon ($workday->morning_end))->format('g:i A');
+                $workday->afternoon_start = (new Carbon ($workday->afternoon_start))->format('g:i A');
+                $workday->afternoon_end = (new Carbon ($workday->afternoon_end))->format('g:i A');
+                return $workday;
 
-        $afternoontimes = [
-            '12:00', '12:30','13:00', '13:30','14:00', '14:30',
-            '15:00', '15:30','16:00', '16:30','17:00', '17:30',
-            '18:00', '18:30','19:00', '19:30','20:00', '20:30',
-            '21:00', '21:30','22:00', '22:30','23:00', '23:30',
-        ];
-        return view('schedule', compact('days', 'morningtimes', 'afternoontimes'));
+            });
+        }else {
+            $workdays = collect();
+            for ($i=0; $i < 7; $i++) { 
+                $workdays->push(new WorkDay());
+            }
+        }
+        $days = $this->days;
+        //dd($workdays);
+        return view('schedule', compact('days', 'workdays'));
     }
 
     public function store(Request $request)
     {
+       // dd($request);
         $active = $request->input('active') ?: [];
         $morning_start = $request->input('morning_start');
         $morning_end = $request->input('morning_end');
         $afternoon_start = $request->input('afternoon_start');
         $afternoon_end = $request->input('afternoon_end');
+
+        $errors = [];
+        
         for ($i=0; $i < 7; $i++) { 
+            if ($morning_start[$i] > $morning_end[$i]) {
+                $errors[] = 'Las horas del turno de mañana son inconsistente para el dia ' . $this->days[$i].'.' ;
+            } if ($afternoon_start[$i] > $afternoon_end[$i]) {
+                $errors[] = 'Las horas del turno de tarde son inconsistente para el dia ' . $this->days[$i].'';
+            }
+
             Workday::updateOrCreate([
                 'day' => $i,
                 'user_id' => auth()->id()
@@ -57,5 +74,11 @@ class ScheduleController extends Controller
                 'afternoon_end' => $afternoon_end[$i],
             ]);
         }
+        if(count($errors) > 0)
+        
+        return back()->with(compact('errors'));
+
+        $notification = 'Los cambios se han guardado correctamente.';
+        return back()->with(compact('notification'));
     }
 }

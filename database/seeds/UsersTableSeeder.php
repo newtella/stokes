@@ -15,15 +15,25 @@ class UsersTableSeeder extends Seeder
         User::create([
             'name' => "Newtella",
             'email' => "newtella@stokes.com",
-            //'email_verified_at' => now(),
             'password' => bcrypt('password'), // secret
-            //'remember_token' => Str::random(10),
-            'dpi' => '1234567890',
-            'address' => "",
-            'phone' => "",
             'role' => "admin"
         ]);
-        factory(User::class, 50)->create();
+
+        User::create([
+            'name' => "Henry Diaz",
+            'email' => "hdiaz@stokes.com",
+            'password' => bcrypt('password'), // secret
+            'role' => "doctor"
+        ]);
+
+        User::create([
+            'name' => "Dorian Oliveros",
+            'email' => "doliveros@stokes.com",
+            'password' => bcrypt('password'), // secret
+            'role' => "patient"
+        ]);
+
+        factory(User::class, 50)->states('patient')->create();
     }
 
 }
