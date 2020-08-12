@@ -7,7 +7,7 @@ use App\Specialty;
 use App\Appointment;
 use Carbon\Carbon;
 use App\Interfaces\ScheduleServiceInterface;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 use App\CancelledAppointment;
 
 class AppointmentController extends Controller

@@ -26,7 +26,7 @@ class AddStatusToAppointments extends Migration
     public function down()
     {
         Schema::table('appointments', function (Blueprint $table) {
-            $table-dropColumn('status');
+            $table->dropColumn('status');
         });
     }
 }
