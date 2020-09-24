@@ -13,6 +13,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "6.0.*",
         "laravel/helpers": "^1.2",
+        "laravel/passport": "9.3.0",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {

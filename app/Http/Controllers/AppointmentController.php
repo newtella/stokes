@@ -53,7 +53,8 @@ class AppointmentController extends Controller
             ->where('patient_id', auth()->id())
             ->paginate(10);
         }
-        return view('appointments.index', compact('appointments','pendingAppointments','confirmedAppointments', 'oldAppointments', 'role'));
+        return view('appointments.index', compact('pendingAppointments','confirmedAppointments', 'oldAppointments', 'role'));
+        //'appointments'
     }
 
     public function create(ScheduleServiceInterface $scheduleService)
