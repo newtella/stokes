@@ -23,7 +23,8 @@ class AuthController extends Controller
             return response()->json([
                 'success' => true,
                 'token' => $success,
-                'user' => $user
+                'user' => $user->name,
+                'message' => 'Inicio de Sesion Exitosamente',
             ], 200);
         } 
         else{ 
@@ -33,5 +34,22 @@ class AuthController extends Controller
                 'message' => 'Correo o Contraseña Invalidos',
             ], 401); 
         } 
+    }
+
+    public function logout(Request $res){
+      if (Auth::user()) {
+        $user = Auth::user()->token();
+        $user->revoke();
+
+        return response()->json([
+          'success' => true,
+          'message' => 'Logout successfully'
+      ]);
+      }else {
+        return response()->json([
+          'success' => false,
+          'message' => 'Unable to Logout'
+        ]);
+      }
     }
 }

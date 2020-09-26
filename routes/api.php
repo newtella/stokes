@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::post('/v1/login', 'Api\v1\AuthController@login');
-
+Route::get('/v1/appointments','Api\v1\AppointmentController@index');
 /* Route::middleware('auth:api')->group(function(){
 
     Route::get('/user', function (Request $request){
