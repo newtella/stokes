@@ -17,11 +17,12 @@ class AppointmentResource extends JsonResource
         return [
             'id' => $this->id,
             'description' => $this->description,
-            'specialty' => $this->specialty->name,
-            'doctor' => $this->doctor->name,
-            'patient' => $this->patient->name,
-            'created_at' => $this->created_at->format('d/m/Y'),
-            'updated_at' => $this->updated_at->format('d/m/Y'),
+            'specialty_id' => $this->specialty->name,
+            'doctor_id' => $this->doctor->name,
+            'patient_id' => $this->patient->name,
+            'scheduled_date' => $this->scheduled_date,
+            'scheduled_time' => $this->scheduled_time,
+            'type' => $this->type,
         ];
     }
 }
