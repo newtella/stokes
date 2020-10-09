@@ -21,6 +21,12 @@ Route::post('/v1/appointments','Api\v1\AppointmentController@store')->middleware
 Route::get('/v1/appointments/{id}','Api\v1\AppointmentController@show')->middleware('auth:api');
 Route::put('/v1/appointments/{id}','Api\v1\AppointmentController@update')->middleware('auth:api');
 Route::delete('/v1/appointments/{id}','Api\v1\AppointmentController@destroy')->middleware('auth:api');
+
+//JSON
+Route::get('/v1/specialties', 'Api\SpecialtyController@index');
+Route::get('/v1/specialties/{specialty}/doctors', 'Api\SpecialtyController@doctors');
+Route::get('/v1/schedule/hours', 'Api\ScheduleController@hours');
+
 /* Route::middleware('auth:api')->group(function(){
 
     Route::get('/user', function (Request $request){
