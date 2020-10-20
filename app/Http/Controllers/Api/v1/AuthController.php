@@ -23,7 +23,8 @@ class AuthController extends Controller
             return response()->json([
                 'success' => true,
                 'token' => $success,
-                'user' => $user->name,
+                'name' => $user->name,
+                'email' => $user->email,
                 'message' => 'Inicio de Sesion Exitosamente',
             ], 200);
         } 
@@ -32,7 +33,7 @@ class AuthController extends Controller
             return response()->json([
                 'success' => false,
                 'message' => 'Correo o Contraseña Invalidos',
-            ], 401); 
+            ], 200); 
         } 
     }
 
