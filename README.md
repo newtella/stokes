@@ -47,6 +47,16 @@ Who needs screenshots when you have a demo:
 
 :cloud: http://104.131.65.75/login
 
+## Mobile App
+Stokes, is not only designed for browsers, but also for mobile phones thanks to its API
+
+:robot: Android:
+https://github.com/newtella/stokes-android
+
+:apple:IOS: 
+Soon..
+
+
 ## Help us
 Do you like stokes? We need some hands :raised_hands:
 
