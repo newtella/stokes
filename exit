@@ -1,0 +1,17 @@
+[0;1;31m●[0m apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: [0;1;31mfailed[0m (Result: exit-code) since Tue 2020-08-11 16:25:48 UTC; 12s ago
+  Process: 12493 ExecStop=/usr/sbin/apachectl stop [0;1;31m(code=exited, status=1/FAILURE)[0m
+  Process: 12538 ExecStart=/usr/sbin/apachectl start [0;1;31m(code=exited, status=1/FAILURE)[0m
+ Main PID: 28053 (code=exited, status=0/SUCCESS)
+
+Aug 11 16:25:48 stokes-test-server systemd[1]: Starting The Apache HTTP Server...
+Aug 11 16:25:48 stokes-test-server apachectl[12538]: AH00526: Syntax error on line 10 of /etc/apache2/sites-enabled/000-default.conf:
+Aug 11 16:25:48 stokes-test-server apachectl[12538]: Invalid command 'RwwriteBase', perhaps misspelled or defined by a module not included in the server configuration
+Aug 11 16:25:48 stokes-test-server apachectl[12538]: Action 'start' failed.
+Aug 11 16:25:48 stokes-test-server apachectl[12538]: The Apache error log may have more information.
+Aug 11 16:25:48 stokes-test-server systemd[1]: [0;1;39m[0;1;31m[0;1;39mapache2.service: Control process exited, code=exited status=1[0m
+Aug 11 16:25:48 stokes-test-server systemd[1]: [0;1;39m[0;1;31m[0;1;39mapache2.service: Failed with result 'exit-code'.[0m
+Aug 11 16:25:48 stokes-test-server systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start The Apache HTTP Server.[0m
