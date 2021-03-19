@@ -39,7 +39,7 @@ More information: https://laravel.com/docs/6.x
     doliveros@stokes.com
     password
 
-Also you can create your customs credentials, you need to be an **Admin User.** 
+Also you can create your custom credentials, you need to be an **Admin User.** 
 Look at **role field** in **users table**.
 
 ## Screenshots
