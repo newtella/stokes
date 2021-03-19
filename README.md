@@ -4,6 +4,9 @@ Stokes is a **medical appointment app** made it with :heart: + PHP and Laravel F
 
 This **non-profit project** start as a platform for doctors who wants help people and can't afford an app **for attend his clients without at any cost**.
 
+
+Stokes its inspired in the medical appointments app maked by: https://github.com/JCarlosR Laravel + Android Course on Udemy. 
+
 ## What do you need?
 
 :rocket:Tested with the following requirements:
