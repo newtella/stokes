@@ -10,10 +10,10 @@
       <div class="col-xl-6">
         <ul class="nav nav-footer justify-content-center justify-content-xl-end">
           <li class="nav-item">
-            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Template</a>
+            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Plantilla</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" target="_blank">Acerca de nosotors</a>
+            <a href="#" class="nav-link" target="_blank">Ayuda</a>
           </li>
         </ul>
       </div>
