@@ -2,7 +2,7 @@
     <div class=" dropdown-header noti-title">
         <h6 class="text-overflow m-0">Bienvenido!</h6>
     </div>
-    <a href="./examples/profile.html" class="dropdown-item">
+    <!-- <a href="./examples/profile.html" class="dropdown-item">
         <i class="ni ni-single-02"></i>
         <span>Mi Perfil</span>
     </a>
@@ -17,7 +17,7 @@
     <a href="./examples/profile.html" class="dropdown-item">
         <i class="ni ni-support-16"></i>
         <span>Ayuda</span>
-    </a>
+    </a> -->
     <div class="dropdown-divider"></div>
     <a href="{{route('logout')}}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout3').submit();" >
         <i class="ni ni-user-run"></i>
