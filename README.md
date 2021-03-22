@@ -1,3 +1,19 @@
+<p align="center">
+    <img alt="Logo" src="https://github.com/newtella/stokes/blob/master/public/img/brand/logo_app_stokes.png" width="180" height="180"/>
+</p>
+
+<p align="center">
+    <a href="https://laravel.com">
+        <img alt="Laravel v6.20" src="https://img.shields.io/badge/Laravel-6.20-red?style=for-the-badge&logo=laravel&logoColor=white">
+    </a>
+    <a href="https://github.com/laravel/passport">
+        <img alt="Passport v9.3" src="https://img.shields.io/badge/Passport-9.3-red?style=for-the-badge&logo=laravel&logoColor=white">
+    </a>
+    <a href="https://getbootstrap.com/docs/4.5">
+        <img alt="Bootstrap v4.1" src="https://img.shields.io/badge/Bootstrap-4.1-blue?style=for-the-badge&logo=bootstrap&logoColor=white">
+    </a>
+</p>
+
 ## What's Stokes?
 
 Stokes is a **medical appointment app** made it with :heart: + PHP and Laravel Framework v6  for doctors and patients.
