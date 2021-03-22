@@ -9,7 +9,7 @@
     <a href="https://github.com/laravel/passport">
         <img alt="Passport v9.3" src="https://img.shields.io/badge/Passport-9.3-red?style=for-the-badge&logo=laravel&logoColor=white">
     </a>
-    <a href="https://getbootstrap.com/docs/4.5">
+    <a href="https://getbootstrap.com/docs/4.1">
         <img alt="Bootstrap v4.1" src="https://img.shields.io/badge/Bootstrap-4.1-blue?style=for-the-badge&logo=bootstrap&logoColor=white">
     </a>
 </p>
@@ -59,7 +59,7 @@ Also you can create your custom credentials, you need to be an **Admin User.**
 Look at **role field** in **users table**.
 
 ## Screenshots
-Who needs screenshots when you have a demo:
+Who needs screenshots when you have a demo?:
 
 :cloud: http://104.131.65.75/login
 
