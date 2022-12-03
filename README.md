@@ -61,7 +61,7 @@ Look at **role field** in **users table**.
 ## Screenshots
 Who needs screenshots when you have a demo?:
 
-:cloud: http://104.131.65.75/login
+:cloud: https://stokes.gofm.codes/login
 
 ## Mobile App
 Stokes, is not only designed for browsers, but also for mobile phones thanks to its API
